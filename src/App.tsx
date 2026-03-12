@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import './App.css'
 import { Card } from './components/card/card';
-import type { FoodData } from './interface/FoodData';
 import { useFoodData } from './hooks/useFoodData';
 import { CreateModal } from './components/create-modal/create-modal';
 
@@ -19,8 +18,6 @@ function App() {
       <div className="card-grid">
         {data?.map(foodData => 
           <Card
-           key={foodData.id}
-           id={foodData.id}
             price={foodData.price} 
             title={foodData.title} 
             image={foodData.image}
